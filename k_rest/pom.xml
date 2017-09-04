@@ -8,25 +8,24 @@
 	<artifactId>k_rest</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
- <!-- <parent>
+ <parent>
     <groupId>com.gcp.demo.kmm</groupId>
     <artifactId>K_Parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-  </parent> 	 -->
+  </parent> 	 
 	
-<!--	<dependencyManagement>
+	<dependencyManagement>
 		<dependencies>
-			<dependency> -->
-	<parent>
+			<dependency> 
+
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.2.RELEASE</version>	
-	</parent>
-	<!--			<type>pom</type>
+				<type>pom</type>
 				<scope>import</scope>				
 			</dependency>
 		</dependencies>
-	</dependencyManagement> -->
+	</dependencyManagement> 
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
