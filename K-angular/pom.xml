@@ -3,11 +3,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
 
-<!--   <parent>
+  <parent>
     <groupId>com.gcp.demo.kmm</groupId>
-    <artifactId>KMM_Parent</artifactId>
+    <artifactId>K_Parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-  </parent> -->
+  </parent> 
 
   <groupId>com.gcp.demo.kmm</groupId>
   <artifactId>K-angular</artifactId>
