@@ -22,5 +22,5 @@
 
 export const environment = {
   production: true,
-   REST_API_URL: 'http://localhost:8080/api/'
+   REST_API_URL: 'https://possible-pager-177612.appspot.com/api/'
 };
