@@ -23,5 +23,5 @@
 //  REST_API_URL: 'http://10.110.115.74:9966/petclinic/api/'
 export const environment = {
   production: false,
-   REST_API_URL: 'http://localhost:8080/api/'
+   REST_API_URL: 'https://possible-pager-177612.appspot.com/api/'
 };
