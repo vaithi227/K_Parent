@@ -53,16 +53,16 @@ INSERT IGNORE INTO visits VALUES (3, 8, '2009-06-04', 'neutered');
 INSERT IGNORE INTO visits VALUES (4, 7, '2008-09-04', 'spayed');
 
 
-INSERT IGNORE INTO programs VALUES (1, 'pg1', 'Susan', '11', 'Fall-2017', 'Nike','Cold');
-INSERT IGNORE INTO programs VALUES (2,'pg2','Milan','12','Fall-2017','Adidas','COLD');
-INSERT IGNORE INTO programs VALUES (3,'pg3','Geo','13','Spring-2017','Arrow','HOT');
-INSERT IGNORE INTO programs VALUES (4,'pg4','Nat','14','Spring-2017','Hugh','HOT');
-INSERT IGNORE INTO programs VALUES (5,'pg5','Gene','14','Spring-2017','Raplh','HOT');
-INSERT IGNORE INTO programs VALUES (6,'pg6','Scott','14','Spring-2017','Diesel','HOT');
-INSERT IGNORE INTO programs VALUES (7,'pg7','Patt','15','Fall-2017','Louis Philppe','COLD');
-INSERT IGNORE INTO programs VALUES (8,'pg8','Nicole','15','Fall-2017','Raymond','COLD');
-INSERT IGNORE INTO programs VALUES (9,'pg9','Matt','16','Fall-2017','Peter England','COLD');
-INSERT IGNORE INTO programs VALUES (10,'pg10','Jane','16','Fall-2017','Lee Cooper','COLD');
+INSERT IGNORE INTO programs VALUES (1, 'pg1', 'Susan', '11', 'FALL-2017', 'Nike','COLD');
+INSERT IGNORE INTO programs VALUES (2,'pg2','Milan','12','FALL-2017','Adidas','COLD');
+INSERT IGNORE INTO programs VALUES (3,'pg3','Geo','13','SPRING-2017','Arrow','HOT');
+INSERT IGNORE INTO programs VALUES (4,'pg4','Nat','14','SPRING-2017','Hugh','HOT');
+INSERT IGNORE INTO programs VALUES (5,'pg5','Gene','14','SPRING-2017','Raplh','HOT');
+INSERT IGNORE INTO programs VALUES (6,'pg6','Scott','14','SPRING-2017','Diesel','HOT');
+INSERT IGNORE INTO programs VALUES (7,'pg7','Patt','15','FALL-2017','Louis Philppe','COLD');
+INSERT IGNORE INTO programs VALUES (8,'pg8','Nicole','15','FALL-2017','Raymond','COLD');
+INSERT IGNORE INTO programs VALUES (9,'pg9','Matt','16','FALL-2017','Peter England','COLD');
+INSERT IGNORE INTO programs VALUES (10,'pg10','Jane','16','FALL-2017','Lee Cooper','COLD');
 
 INSERT IGNORE INTO projections VALUES (1,'prj1','pg1');
 INSERT IGNORE INTO projections VALUES (2,'prj2','pg2');
