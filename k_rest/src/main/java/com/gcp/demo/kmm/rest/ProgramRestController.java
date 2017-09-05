@@ -24,7 +24,7 @@ import com.gcp.demo.kmm.model.Program;
 
 @RestController
 @CrossOrigin(exposedHeaders = "errors, content-type")
-@RequestMapping("/programs")
+@RequestMapping("/api/programs")
 public class ProgramRestController {
 
 	@Autowired
