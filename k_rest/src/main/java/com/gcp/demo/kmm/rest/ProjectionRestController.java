@@ -24,7 +24,7 @@ import com.gcp.demo.kmm.service.KmmProjectionService;
 
 @RestController
 @CrossOrigin(exposedHeaders = "errors, content-type")
-@RequestMapping("/projections")
+@RequestMapping("/api/projections")
 public class ProjectionRestController {
 
 	@Autowired
