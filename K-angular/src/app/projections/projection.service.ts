@@ -2,6 +2,7 @@
 import {Injectable} from '@angular/core';
 import {Http, Response, Headers, RequestOptions} from '@angular/http';
 import {Projection} from './projection';
+import {Program} from './../programs/program';
 import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
 
@@ -14,6 +15,7 @@ export class ProjectionService {
   }
 
   getProjections(): Observable<Projection[]> {
+  console.log('getProjections log: ');
     return this._http.get(this.entity_url)
       .map((response: Response) => <Projection[]> response.json())
       .catch(this.handleError);
@@ -22,6 +24,13 @@ export class ProjectionService {
   getProjectionById(projection_id: string): Observable<Projection> {
     return this._http.get((this.entity_url + '/' + projection_id))
       .map((response: Response) => <Projection> response.json())
+      .catch(this.handleError);
+  }
+  
+   getProgramLists(): Observable<Program[]> {
+   console.log('getProgramNames log: ');
+    return this._http.get((this.entity_url + '/getPrograms' ))
+      .map((response: Response) => <Program[]> response.json())
       .catch(this.handleError);
   }
 

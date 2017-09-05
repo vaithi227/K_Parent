@@ -19,7 +19,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import com.gcp.demo.kmm.model.Program;
 import com.gcp.demo.kmm.model.Projection;
+import com.gcp.demo.kmm.service.KmmProgramService;
 import com.gcp.demo.kmm.service.KmmProjectionService;
 
 @RestController
@@ -108,6 +110,18 @@ public class ProjectionRestController {
 		}
 		this.kmmProjectionService.deleteProjection(projection);
 		return new ResponseEntity<Void>(HttpStatus.NO_CONTENT);
+	}
+	
+	@Autowired
+	private KmmProgramService kmmProgramService;
+	
+	@RequestMapping(value = "/getPrograms", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public ResponseEntity<Collection<Program>> getPrograms() {
+		Collection<Program> projections = this.kmmProgramService.getProgramNames();
+		if (projections.isEmpty()) {
+			return new ResponseEntity<Collection<Program>>(HttpStatus.NOT_FOUND);
+		}
+		return new ResponseEntity<Collection<Program>>(projections, HttpStatus.OK);
 	}
 
 }

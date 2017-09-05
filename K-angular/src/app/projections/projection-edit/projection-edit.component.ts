@@ -2,6 +2,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ProjectionService} from '../projection.service';
 import {Projection} from '../projection';
+import {Program} from '../../programs/program';
 import {ActivatedRoute, Router} from '@angular/router';
 import 'rxjs/Rx';
 
@@ -13,12 +14,17 @@ import 'rxjs/Rx';
 export class ProjectionEditComponent implements OnInit {
   public projection;
   errorMessage: string;
+  programList: Program[];
 
   constructor(private projectionService: ProjectionService, private route: ActivatedRoute, private router: Router) {
     this.projection = <Projection>{};
   }
 
   ngOnInit() {
+  this.projectionService.getProgramLists().subscribe(
+      programs => this.programList = programs,
+      error => this.errorMessage = <any> error);
+      
     const projectionId = this.route.snapshot.params['id'];
     this.projectionService.getProjectionById(projectionId).subscribe(
       projection => this.projection = projection,

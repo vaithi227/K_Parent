@@ -17,9 +17,11 @@ export class ProjectionListComponent implements OnInit {
   }
 
   ngOnInit() {
+  
     this.projectionService.getProjections().subscribe(
       projections => this.projections = projections,
       error => this.errorMessage = <any> error);
+      console.log(this.projections)
   }
 
   onSelect(projection: Projection) {

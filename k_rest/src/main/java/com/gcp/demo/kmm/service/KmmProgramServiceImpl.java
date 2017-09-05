@@ -1,6 +1,8 @@
 package com.gcp.demo.kmm.service;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -64,6 +66,14 @@ public class KmmProgramServiceImpl implements KmmProgramService {
 	@Transactional(readOnly = true)
 	public Collection<Program> findProgramByProgramName(String programName) throws DataAccessException {
 		return programRepository.findByProgramName(programName);
+	}
+
+
+
+	@Override
+	public Collection<Program> getProgramNames() throws DataAccessException {
+		
+		return programRepository.findAll();
 	}
 
 	

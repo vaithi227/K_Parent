@@ -1,6 +1,7 @@
 package com.gcp.demo.kmm.service;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.dao.DataAccessException;
 
@@ -14,6 +15,7 @@ public interface KmmProgramService {
 	void saveProgram(Program program) throws DataAccessException;
 	void deleteProgram(Program program) throws DataAccessException;
 	Collection<Program> findProgramByProgramName(String programName) throws DataAccessException;
+	Collection<Program> getProgramNames() throws DataAccessException;
 
 
 }
